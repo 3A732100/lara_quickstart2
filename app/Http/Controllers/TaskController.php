@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class TaskController extends Controller
 {
     public function index(Request $request){
-        return view('tasks.index');
+        return view('tasks.index');//回傳tasks.index視圖
     }
     public function __construct()
     {
