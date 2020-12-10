@@ -29,6 +29,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);//與Task model的關聯
+    }
+
     /**
      * The attributes that should be hidden for arrays.
      *
