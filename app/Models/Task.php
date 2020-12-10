@@ -14,9 +14,4 @@ class Task extends Model
     {
         return $this->belongsTo(User::class);//與User model的關聯
     }
-
-    public function __construct()
-    {
-        $this->middleware('auth');//讓有經過驗證的使用者才能存取
-    }
 }
