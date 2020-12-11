@@ -36,6 +36,8 @@ class TaskController extends Controller
     public function destroy(Request $request, Task $task)
     {
         $this->authorize('destroy', $task);//授權行為
+        $task->delete();
+        return redirect('/tasks');
     }
 
     public function __construct()
