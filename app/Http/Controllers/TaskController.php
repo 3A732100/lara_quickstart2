@@ -33,6 +33,11 @@ class TaskController extends Controller
 
     }
 
+    public function destroy(Request $request, Task $task)
+    {
+        $this->authorize('destroy', $task);//授權行為
+    }
+
     public function __construct()
     {
         $this->middleware('auth');//讓有經過驗證的使用者才能存取
